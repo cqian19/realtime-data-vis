@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ interface IProductProps {
     product: IProduct
 }
 
-export default function Product(props: IProductProps) {
+const Product: FC<IProductProps> = (props: IProductProps) => {
     const router = useRouter();
 
     return (
@@ -38,5 +39,7 @@ export default function Product(props: IProductProps) {
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Product;
